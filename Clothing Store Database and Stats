@@ -1,0 +1,27 @@
+--create a clothing store database
+CREATE TABLE vistox_clothing(id INTEGER PRIMARY KEY, description TEXT, color TEXT, size TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO vistox_clothing VALUES(1,"Backless Batwing Sleeve Top","Black","MED", 10, 12);
+INSERT INTO vistox_clothing VALUES(2, "Solid Tee", "Red", "MED", 6, 8);
+INSERT INTO vistox_clothing VALUES(3,"Twist Split Hem Tube Top", "Teal", "SM", 4, 7);
+INSERT INTO vistox_clothing VALUES(4,"Stripped Cami Top", "Stripped","MED", 3, 10);
+INSERT INTO vistox_clothing VALUES(5,"Ribbed Knit Top", "Purple", "LG", 5, 6);
+INSERT INTO vistox_clothing VALUES(6,"Shoulder Solid Romper", "Black", "MED", 3, 13);
+INSERT INTO vistox_clothing VALUES(7,"Ribbed Knit Tube Top", "Cream", "LG", 7, 24);
+INSERT INTO vistox_clothing VALUES(8,"Solid Form Fitted Tee", "Khaki", "MED", 8, 9);
+INSERT INTO vistox_clothing VALUES(9,"Shirred Waist Leg Pants", "Dusty Pink", "LG", 4, 4);
+INSERT INTO vistox_clothing VALUES(10,"Crop Tank Top", "Mocha Brown", "MED", 5, 17);
+INSERT INTO vistox_clothing VALUES(11,"Flag Print Tank Top", "Flag", "SM", 2, 13);
+INSERT INTO vistox_clothing VALUES(12, "Unity Sold Waffle Knot Crop Tee", "Brown", "LG", 9, 14);
+INSERT INTO vistox_clothing VALUES(13,"Solid Textured Tube Top", "Black", "MED", 4, 15);
+INSERT INTO vistox_clothing VALUES(14,"Blackless Halter Top", "Black", "MED", 4, 17);
+INSERT INTO vistox_clothing VALUES(15,"Form Fitting Cami Top", "Black", "MED", 6, 15);
+
+--display the database ordered by price. 
+SELECT * FROM vistox_clothing ORDER BY price;
+
+--what is the total of cost * number in stock
+SELECT Description, quantity*price AS total FROM vistox_clothing;
+
+--what is the average price of the items 
+SELECT AVG(price) FROM vistox_clothing;
